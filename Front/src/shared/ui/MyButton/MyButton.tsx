@@ -1,12 +1,12 @@
 import { Button, ButtonProps } from 'antd';
 
 
-interface IMyButton extends ButtonProps{
+interface MyButtonProps extends ButtonProps{
     text: string
 }
 
 
-export const MyButton = (props:IMyButton) => {
+export const MyButton = (props:MyButtonProps) => {
     
     const {text , ...other}=props
 
