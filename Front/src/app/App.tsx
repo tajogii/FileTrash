@@ -1,18 +1,18 @@
+import { MyButton } from "src/shared/ui/MyButton/MyButton"
+import { useTheme } from "./provider/Themeprovider"
 
-
-import { MyButton } from "shared/ui/MyButton/MyButton"
-import { Themeprovider } from "./Themeprovider/Themeprovider"
 
 
 
 export const App = () => {
 
+    const {toggleTheme} = useTheme()
+
     return (
-        <Themeprovider>
-            <div>
-                <MyButton type={"default"} text={"Test"}/>
-            </div>
-        </Themeprovider>
+
+        <div>
+            <MyButton type={"default"} text={"Test"} onClick={toggleTheme}/>
+        </div>
         
    
     )
